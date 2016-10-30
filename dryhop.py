@@ -7,7 +7,7 @@ BASE_URL = "http://www.dryhopchicago.com/drink/beer/"
 class Beer(object):
 
     def __init__(self, name, info, desc):
-        self.name = name
+        self.name = name.title()
         self.style = self.parse_style(info)
         self.abv = self.parse_abv(info)
         self.desc = desc
