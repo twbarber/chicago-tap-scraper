@@ -75,8 +75,3 @@ def parse_beers(beer_list):
 def get_menu():
     html = get_menu_html()
     return parse_menu_html(html)
-
-menu = get_menu()
-for beer in menu.beer_list:
-    print(beer)
-print(menu.json())
