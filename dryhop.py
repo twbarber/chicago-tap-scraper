@@ -12,7 +12,11 @@ class Menu(object):
         self.beer_list = beer_list
 
     def __repr__(self):
-        return json.dumps(str(self.__dict__))
+        return json.dumps(self.__dict__,
+                          default=lambda o: o.__dict__,
+                          indent=4,
+                          separators=(',', ': ')
+                          )
 
     def json(self):
         return self.__repr__()
@@ -70,7 +74,9 @@ def parse_beers(beer_list):
 
 def get_menu():
     html = get_menu_html()
-    menu = parse_menu_html(html)
-    print(menu.json())
+    return parse_menu_html(html)
 
-get_menu()
+menu = get_menu()
+for beer in menu.beer_list:
+    print(beer)
+print(menu.json())
