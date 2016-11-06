@@ -1,25 +1,24 @@
 import re
 import unittest
-from taps.corridor import Corridor
+
+from TapScraper.taps import dryhop
 
 
-class CorridorTest(unittest.TestCase):
+class DryHopTest(unittest.TestCase):
 
-    corridor = Corridor()
-    html = corridor.get_menu_html()
+    html = dryhop.get_menu_html()
 
     def test_url_ok(self):
-        response = self.corridor.get_menu_html()
+        response = dryhop.get_menu_html()
         self.assertEqual(response.status_code, 200)
 
     def test_can_parse_menu(self):
-        menu = self.corridor.parse_menu_html(self.html)
-        print(menu)
+        menu = dryhop.parse_menu_html(self.html)
         self.assertTrue(menu.updated is not None)
         self.assertTrue(len(menu.beer_list) > 0)
 
     def test_beer_list_integrity(self):
-        menu = self.corridor.parse_menu_html(self.html)
+        menu = dryhop.parse_menu_html(self.html)
         for beer in menu.beer_list:
             self.assertTrue(beer.name is not None)
             self.assertTrue(re.match(r'^\d\.\d%', beer.abv))

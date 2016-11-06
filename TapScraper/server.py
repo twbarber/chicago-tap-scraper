@@ -1,23 +1,24 @@
 from flask import Flask
 from flask import Response
-from taps.dryhop import Dryhop
-from taps.corridor import Corridor
+
+from TapScraper.taps import corridor
+from TapScraper.taps import dryhop
 
 app = Flask(__name__)
 
 
 @app.route("/dryhop")
-def dryhop():
-    tap = Dryhop()
-    data = tap.get_menu().json()
+def taps_dryhop():
+    menu = dryhop.get_menu()
+    data = menu.json()
     response = Response(response=data, status=200, mimetype="application/json")
     return response
 
 
 @app.route("/corridor")
-def corridor():
-    tap = Corridor()
-    data = tap.get_menu().json()
+def taps_corridor():
+    menu = corridor.get_menu()
+    data = menu.json()
     response = Response(response=data, status=200, mimetype="application/json")
     return response
 
