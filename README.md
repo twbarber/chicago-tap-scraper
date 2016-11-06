@@ -1,8 +1,10 @@
 # Chicago Tap Scraper
 
-[![Build Status](https://travis-ci.org/twbarber/chicago-tap-scraper.svg?branch=master)](https://travis-ci.org/twbarber/chicago-tap-scraper)
-
 Scrapes different Craft Brewery websites for current Tap Room Options
+
+## Builds
+
+[![Build Status](https://travis-ci.org/twbarber/chicago-tap-scraper.svg?branch=master)](https://travis-ci.org/twbarber/chicago-tap-scraper)
 
 ## Currently Supported Breweries
 
