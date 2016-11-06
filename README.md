@@ -1,4 +1,4 @@
-# Tap Scraper
+# Chicago Tap Scraper
 
 Scrapes different Craft Brewery websites for current Tap Room Options
 
