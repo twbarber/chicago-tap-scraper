@@ -6,3 +6,7 @@
 
     - server.py can now be run as a web server via flask
     - dist directory removed from git
+
+# 0.0.3
+
+    - Corridor JSON endpoint should be functioning correctly

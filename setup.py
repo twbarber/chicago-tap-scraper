@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='chicago-tap-scraper',
-    version='0.0.2',
+    version='0.0.3',
     packages=['TapScraper', 'TapScraper.taps', 'TapScraper.tests'],
     url='https://github.com/twbarber/chicago-tap-scraper',
     license='MIT',
