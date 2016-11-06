@@ -3,7 +3,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from TapScraper.menu import Menu, Beer
+from cts.menu import Menu, Beer
 
 BASE_URL = "http://www.corridorchicago.com/beer-menu/"
 

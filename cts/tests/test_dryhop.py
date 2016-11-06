@@ -1,7 +1,7 @@
 import re
 import unittest
 
-from TapScraper.taps import dryhop
+from cts.taps import dryhop
 
 
 class DryHopTest(unittest.TestCase):

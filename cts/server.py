@@ -1,8 +1,8 @@
 from flask import Flask
 from flask import Response
 
-from TapScraper.taps import corridor
-from TapScraper.taps import dryhop
+from cts.taps import corridor
+from cts.taps import dryhop
 
 app = Flask(__name__)
 

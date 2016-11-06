@@ -10,3 +10,7 @@
 # 0.0.3
 
     - Corridor JSON endpoint should be functioning correctly
+
+# 0.0.4
+
+    - TapScraper module is now cts for brevity

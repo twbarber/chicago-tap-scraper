@@ -1,7 +1,7 @@
 import re
 import unittest
 
-from TapScraper.taps import corridor
+from cts.taps import corridor
 
 
 class CorridorTest(unittest.TestCase):
