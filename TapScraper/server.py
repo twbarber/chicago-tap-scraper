@@ -23,5 +23,9 @@ def taps_corridor():
     return response
 
 
+def run():
+    app.run()
+
+
 if __name__ == "__main__":
     app.run()
