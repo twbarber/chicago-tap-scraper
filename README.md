@@ -1,4 +1,4 @@
-# Chicago Tap Scraper [![Build Status](https://travis-ci.org/twbarber/chicago-tap-scraper.svg?branch=master)](https://travis-ci.org/twbarber/chicago-tap-scraper)
+# Chicago Tap Scraper
 
 Scrapes different Craft Brewery websites for current Tap Room Options
 
@@ -16,3 +16,7 @@ Scrapes different Craft Brewery websites for current Tap Room Options
 - **Revolution Brewing**
 
 **Disclaimer:** I am in no way associated with these breweries. I just enjoy their beer.
+
+### Builds
+
+[![Build Status](https://travis-ci.org/twbarber/chicago-tap-scraper.svg?branch=master)](https://travis-ci.org/twbarber/chicago-tap-scraper)
