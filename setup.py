@@ -2,8 +2,8 @@ from distutils.core import setup
 
 setup(
     name='chicago-tap-scraper',
-    version='0.0.4',
-    packages=['cts', 'cts.taps', 'cts.tests'],
+    version='0.0.5',
+    packages=['cts', 'cts.taps'],
     url='https://github.com/twbarber/chicago-tap-scraper',
     license='MIT',
     author='Tyler Barber',

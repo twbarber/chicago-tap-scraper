@@ -14,3 +14,7 @@
 # 0.0.4
 
     - TapScraper module is now cts for brevity
+
+# 0.0.5
+
+    - No longer shipping tests with package, available in source.
