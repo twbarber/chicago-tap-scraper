@@ -1,7 +1,5 @@
 # Chicago Tap Scraper
 
-## About
-
 Scrapes different Craft Brewery websites for current Tap Room Options
 
 ## Currently Supported Breweries
