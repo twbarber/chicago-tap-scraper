@@ -3,22 +3,22 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from TapScraper import menu
+from TapScraper.menu import Menu, Beer
 
 BASE_URL = "http://www.corridorchicago.com/beer-menu/"
 
 
 def get_menu_html():
-    return requests.get(BASE_URL)
+    return requests.get(BASE_URL, headers={'User-agent': 'Tap Room Chicago'})
 
 
 def parse_menu_html(html):
-    soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html.content, "lxml")
     content = soup.find("div", {"id": "block-b49ad1de13139de70881"}).find("p", {"class": "text-align-center"})
     update_date = content.find("em").get_text().split("as of")[1].strip()
-    menu = content.find_all("span")
-    beers = parse_beers(menu)
-    return menu.Menu(update_date, beers)
+    beer_list = content.find_all("span")
+    beers = parse_beers(beer_list)
+    return Menu(update_date, beers)
 
 
 def parse_beers(beer_list):
@@ -45,7 +45,7 @@ def parse_beers(beer_list):
                 else:
                     desc += re.sub(r'\.(?! )', '. ', re.sub(r' +', ' ', text))
                 n += 1
-            beers.append(menu.Beer(title, style, abv, desc.strip()))
+            beers.append(Beer(title, style, abv, desc.strip()))
             x = n
     return beers
 
@@ -61,5 +61,3 @@ def is_beer_style(line):
 def get_menu():
     html = get_menu_html()
     return parse_menu_html(html)
-
-

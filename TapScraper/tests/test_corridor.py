@@ -14,7 +14,6 @@ class CorridorTest(unittest.TestCase):
 
     def test_can_parse_menu(self):
         menu = corridor.parse_menu_html(self.html)
-        print(menu)
         self.assertTrue(menu.updated is not None)
         self.assertTrue(len(menu.beer_list) > 0)
 
